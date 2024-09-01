@@ -51,6 +51,7 @@ jobs:
         with:
           title: Release
           commit: Release new version
+          publish: pnpm changeset publish
         env:
           NPM_CONFIG_PROVENANCE: true
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
