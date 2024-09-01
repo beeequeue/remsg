@@ -1,5 +1,0 @@
----
-"remsg": major
----
-
-Initial release
