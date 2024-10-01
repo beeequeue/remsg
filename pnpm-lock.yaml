@@ -30,8 +30,8 @@ importers:
         specifier: 22.5.1
         version: 22.5.1
       binary-util:
-        specifier: 0.0.0
-        version: 0.0.0
+        specifier: 1.0.0
+        version: 1.0.0
       dotenv:
         specifier: 16.4.5
         version: 16.4.5
@@ -913,8 +913,8 @@ packages:
     resolution: {integrity: sha512-Ceh+7ox5qe7LJuLHoY0feh3pHuUDHAcRUeyL2VYghZwfpkNIy/+8Ocg0a3UuSoYzavmylwuLWQOf3hl0jjMMIw==}
     engines: {node: '>=8'}
 
-  binary-util@0.0.0:
-    resolution: {integrity: sha512-CYlEeC7vsbtv/wOTrdHvV7hi5REOi/KwpM6CUbZMtTd2sezARDZPhXI9POdzmSDSedthOMlNDyojnqAfvip9mw==}
+  binary-util@1.0.0:
+    resolution: {integrity: sha512-mwBRBlQsPB9Y4CCdMQcq5Hp5LQAB2F18DD7nPYhOvDi3YhlByPWqdIUPm1ZH1J0YxrLSGUtyXvlZCpsWy7zAKQ==}
     engines: {node: '>=20'}
 
   boolbase@1.0.0:
@@ -3484,7 +3484,7 @@ snapshots:
 
   binary-extensions@2.3.0: {}
 
-  binary-util@0.0.0: {}
+  binary-util@1.0.0: {}
 
   boolbase@1.0.0: {}
 
