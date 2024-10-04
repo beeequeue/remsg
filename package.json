@@ -37,7 +37,7 @@
     "prepare": "simple-git-hooks"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "3.0.0",
+    "@antfu/eslint-config": "3.7.3",
     "@changesets/changelog-github": "0.5.0",
     "@changesets/cli": "2.27.8",
     "@tsconfig/node22": "22.0.0",
@@ -45,11 +45,11 @@
     "@types/node": "22.7.4",
     "binary-util": "1.0.0",
     "dotenv": "16.4.5",
-    "eslint": "9.9.1",
+    "eslint": "9.12.0",
     "eslint-define-config": "2.1.0",
-    "lint-staged": "15.2.9",
+    "lint-staged": "15.2.10",
     "prettier": "3.3.3",
-    "publint": "0.2.10",
+    "publint": "0.2.11",
     "simple-git-hooks": "2.11.1",
     "tsup": "8.3.0",
     "typescript": "5.6.2",
