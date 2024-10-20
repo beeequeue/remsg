@@ -1,5 +1,7 @@
 import { Buffer } from "node:buffer"
+
 import { expect, it } from "vitest"
+
 import { decrypt, encrypt } from "./crypto"
 
 it("should encrypt and decrypt data", () => {

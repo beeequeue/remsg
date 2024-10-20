@@ -1,9 +1,11 @@
 import type { Buffer } from "node:buffer"
+
 import { Decoder } from "binary-util"
-import { bufferToUUID, extractStringMap } from "./utils"
-import { decrypt } from "./crypto"
+
 import { LanguageCodes } from "./constants"
+import { decrypt } from "./crypto"
 import type { REMsg } from "./types"
+import { bufferToUUID, extractStringMap } from "./utils"
 
 // Internal types
 

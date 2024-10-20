@@ -1,7 +1,8 @@
 import { Encoder } from "binary-util"
+
+import { encrypt } from "./crypto"
 import type { REMsg } from "./types"
 import { createStringMapAndData, uUIDToBuffer } from "./utils"
-import { encrypt } from "./crypto"
 
 export const encodeMsg = (input: REMsg) => {
   if (input.meta.version !== 539100710) {

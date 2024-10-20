@@ -1,4 +1,5 @@
 import { Buffer } from "node:buffer"
+
 import type { REMsg } from "./types"
 
 export const bufferToUUID = (buffer: Buffer): string => {
