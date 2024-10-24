@@ -49,7 +49,7 @@
     "eslint-define-config": "2.1.0",
     "lint-staged": "15.2.10",
     "prettier": "3.3.3",
-    "publint": "0.2.11",
+    "publint": "0.2.12",
     "simple-git-hooks": "2.11.1",
     "tsup": "8.3.0",
     "typescript": "5.6.3",
