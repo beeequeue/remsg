@@ -53,7 +53,7 @@ export const encodeMsg = (input: REMsg) => {
   // language offset
   encoder.setUint64(BigInt(encoder.currentOffset), { into: langOffsetOffset })
   for (let i = 0; i < languageCount; i++) {
-    encoder.setUint32(i)
+    encoder.setInt32(i)
   }
   encoder.alignTo(8)
 

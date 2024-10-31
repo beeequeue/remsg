@@ -82,7 +82,7 @@ export const decodeMsg = (data: Buffer): REMsg => {
 
   const languages = [] as (typeof LanguageCodes)[number][]
   for (let i = 0; i < header.langCount; i++) {
-    languages.push(LanguageCodes[parser.readUint32()])
+    languages.push(LanguageCodes[parser.readInt32()] ?? "unknown")
   }
   parser.alignTo(8)
 
