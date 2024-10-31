@@ -16,7 +16,7 @@ it.skipIf(!existsSync(realFilePath))("should parse a real file", async () => {
   expect(msg.entries[1]).toMatchObject({
     name: "OpenBetaText_000",
     strings: {
-      en: expect.stringContaining("From now on, ask your parents to help you."),
+      en: expect.stringContaining("From now on, ask your parents to help you.") as never,
     },
   })
 })
