@@ -5,7 +5,7 @@ import type { REMsg } from "./types"
 import { createStringMapAndData, uUIDToBuffer } from "./utils"
 
 export const encodeMsg = (input: REMsg) => {
-  if (input.meta.version !== 539100710) {
+  if (input.meta.version !== 539100710 && input.meta.version !== 23) {
     throw new Error(`Unsupported version ${input.meta.version}`)
   }
 
@@ -108,7 +108,9 @@ export const encodeMsg = (input: REMsg) => {
   for (let i = 0; i < input.entries.length; i++) {
     const entry = input.entries[i]
 
-    encoder.setUint64(BigInt(encoder.currentOffset), { into: entryHeaderOffsets[i].attributes })
+    encoder.setUint64(BigInt(encoder.currentOffset), {
+      into: entryHeaderOffsets[i].attributes,
+    })
 
     for (let j = 0; j < input.meta.attributes.length; j++) {
       const attribute = input.meta.attributes[j]

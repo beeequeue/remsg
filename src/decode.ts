@@ -68,7 +68,7 @@ export const decodeMsg = (data: Buffer): REMsg => {
   if (header.magic !== "GMSG") {
     throw new Error(`Invalid magic: ${header.magic as string}`)
   }
-  if (header.version !== 539100710) {
+  if (header.version !== 539100710 && header.version !== 23) {
     throw new Error(`Uknkown version: ${header.version}`)
   }
 
