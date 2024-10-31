@@ -2,6 +2,7 @@
 
 node_modules/
 dist/
+fixtures/
 
 .idea/
 !.idea/jsLibraryMappings.xml
