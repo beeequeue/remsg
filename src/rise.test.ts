@@ -7,7 +7,10 @@ import { expect, it } from "vitest"
 import { decodeMsg } from "./decode"
 import { encodeMsg } from "./encode"
 
-const realFilePath = path.resolve(import.meta.dirname, "../fixtures/OpenBetaText.msg.23")
+const realFilePath = path.resolve(
+  import.meta.dirname,
+  "../fixtures/DialogMsg.msg.539100710",
+)
 
 it.skipIf(!existsSync(realFilePath))("should parse a real file", async () => {
   const file = await fs.readFile(realFilePath)
@@ -15,9 +18,9 @@ it.skipIf(!existsSync(realFilePath))("should parse a real file", async () => {
   const msg = decodeMsg(file)
 
   expect(msg.entries[1]).toMatchObject({
-    name: "OpenBetaText_000",
+    name: "DialogMsg_Fa_TrainingArea_001",
     strings: {
-      en: expect.stringContaining("From now on, ask your parents to help you."),
+      en: "Go to your room?",
     },
   })
 })
