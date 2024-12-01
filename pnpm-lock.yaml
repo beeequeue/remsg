@@ -5,13 +5,13 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  function-bind: npm:@socketregistry/function-bind@^1
-  hasown: npm:@socketregistry/hasown@^1
-  indent-string: npm:@socketregistry/indent-string@^1
-  is-core-module: npm:@socketregistry/is-core-module@^1
-  object-assign: npm:@socketregistry/object-assign@^1
-  path-parse: npm:@socketregistry/path-parse@^1
-  safer-buffer: npm:@socketregistry/safer-buffer@^1
+  function-bind: npm:@socketregistry/function-bind@1.0.5
+  hasown: npm:@socketregistry/hasown@1.0.5
+  indent-string: npm:@socketregistry/indent-string@1.0.6
+  is-core-module: npm:@socketregistry/is-core-module@1.0.5
+  object-assign: npm:@socketregistry/object-assign@1.0.3
+  path-parse: npm:@socketregistry/path-parse@1.0.5
+  safer-buffer: npm:@socketregistry/safer-buffer@1.0.5
 
 importers:
 
@@ -714,8 +714,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@socketregistry/indent-string@1.0.5':
-    resolution: {integrity: sha512-r4hX/Z7qhKBu0H1XJdOHEa2c51qnIN2AyEcmvyfa3qFk0GLZhzYUdAXXw6w+GtlU4U08wnf7WQGf+btlKmRAcg==}
+  '@socketregistry/indent-string@1.0.6':
+    resolution: {integrity: sha512-WdAA0PW4h/sIIciGPby09LHaq+a9c7S+wZIn/YvhWdqC0GJGvzfiVSqQFSLuk1+NDvnhSVd64w/6MXjjuRs+mg==}
     engines: {node: '>=18.20.4'}
 
   '@socketregistry/is-core-module@1.0.5':
@@ -3260,7 +3260,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.24.3':
     optional: true
 
-  '@socketregistry/indent-string@1.0.5': {}
+  '@socketregistry/indent-string@1.0.6': {}
 
   '@socketregistry/is-core-module@1.0.5': {}
 
@@ -3923,7 +3923,7 @@ snapshots:
       eslint: 9.13.0
       esquery: 1.6.0
       globals: 15.11.0
-      indent-string: '@socketregistry/indent-string@1.0.5'
+      indent-string: '@socketregistry/indent-string@1.0.6'
       is-builtin-module: 3.2.1
       jsesc: 3.0.2
       pluralize: 8.0.0
