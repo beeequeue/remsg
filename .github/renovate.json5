@@ -4,7 +4,7 @@
     "helpers:disableTypesNodeMajor",
     "schedule:earlyMondays",
     "group:allNonMajor",
-    "schedule:monthly"
+    "schedule:monthly",
   ],
   prHourlyLimit: 5,
   prConcurrentLimit: 5,
