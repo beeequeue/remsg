@@ -36,7 +36,7 @@ export const extractStringMap = (
   }
 
   const string = data.toString("utf16le")
-  if (string.at(-1) !== "\x00") {
+  if (string[string.length - 1] !== "\x00") {
     throw new Error("String is not null-terminated")
   }
 
