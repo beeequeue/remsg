@@ -9,7 +9,7 @@
     "url": "https://github.com/beeequeue/remsg.git"
   },
   "license": "MIT",
-  "packageManager": "pnpm@9.15.2",
+  "packageManager": "pnpm@10.0.0",
   "engines": {
     "node": ">=20"
   },
