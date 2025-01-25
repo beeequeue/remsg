@@ -11,9 +11,10 @@ This library pretty much a port of [REMSG_Converter](https://github.com/dtlnor/R
 ## Usage
 
 ```typescript
+import { readFileSync } from "fs"
 import { encodeMsg, decodeMsg } from "remsg"
 
-const data = /* load a msg file */
+const data = readFileSync("./somefile.msg.23")
 const json = decodeMsg(data)
 const msg = encodeMsg(json)
 ```
