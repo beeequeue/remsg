@@ -20,6 +20,7 @@ export default antfu({
       "ts/no-unsafe-assignment": "off",
       "node/prefer-global/process": "off",
       "antfu/no-top-level-await": "off",
+      "import/consistent-type-specifier-style": "off",
 
       "perfectionist/sort-imports": [
         "error",
