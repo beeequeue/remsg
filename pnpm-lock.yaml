@@ -15,8 +15,8 @@ overrides:
   jsonc-eslint-parser: '-'
   toml-eslint-parser: '-'
   yaml-eslint-parser: '-'
-  is-core-module: npm:@nolyfill/is-core-module@^1
-  safer-buffer: npm:@nolyfill/safer-buffer@^1
+  is-core-module: npm:@nolyfill/is-core-module@1.0.39
+  safer-buffer: npm:@nolyfill/safer-buffer@1.0.44
 
 importers:
 
@@ -653,8 +653,8 @@ packages:
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
 
-  '@nolyfill/safer-buffer@1.0.41':
-    resolution: {integrity: sha512-RieuhcNjFpL2NObzKlsNGM5rCan1y2PH3KUUJ01Yhxqj4gTB20WplufPmQRSrLdI9BWf8cBrxvXuRtjvMRKzxQ==}
+  '@nolyfill/safer-buffer@1.0.44':
+    resolution: {integrity: sha512-Ouw1fMwjAy1V4MpnDASfu1DCPgkP0nNFteiiWbFoEGSqa7Vnmkb6if2c522N2WcMk+RuaaabQbC1F1D4/kTXcg==}
     engines: {node: '>=12.4.0'}
 
   '@pkgjs/parseargs@0.11.0':
@@ -2898,7 +2898,7 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.19.0
 
-  '@nolyfill/safer-buffer@1.0.41': {}
+  '@nolyfill/safer-buffer@1.0.44': {}
 
   '@pkgjs/parseargs@0.11.0':
     optional: true
@@ -3799,7 +3799,7 @@ snapshots:
 
   iconv-lite@0.7.0:
     dependencies:
-      safer-buffer: '@nolyfill/safer-buffer@1.0.41'
+      safer-buffer: '@nolyfill/safer-buffer@1.0.44'
 
   ignore@5.3.2: {}
 
