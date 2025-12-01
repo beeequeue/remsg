@@ -9,7 +9,7 @@
     "url": "https://github.com/beeequeue/remsg.git"
   },
   "license": "MIT",
-  "packageManager": "pnpm@10.20.0",
+  "packageManager": "pnpm@10.24.0",
   "engines": {
     "node": ">=20"
   },
@@ -38,20 +38,20 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "5.4.1",
-    "@changesets/changelog-github": "0.5.1",
-    "@changesets/cli": "2.29.7",
-    "@tsconfig/node22": "22.0.2",
-    "@tsconfig/strictest": "2.0.7",
-    "@types/node": "22.18.13",
+    "@changesets/changelog-github": "0.5.2",
+    "@changesets/cli": "2.29.8",
+    "@tsconfig/node22": "22.0.5",
+    "@tsconfig/strictest": "2.0.8",
+    "@types/node": "22.19.1",
     "binary-util": "1.1.1",
     "dotenv": "16.6.1",
     "eslint": "9.39.0",
     "eslint-define-config": "2.1.0",
     "lint-staged": "16.2.6",
-    "prettier": "3.6.2",
+    "prettier": "3.7.3",
     "publint": "0.3.15",
     "simple-git-hooks": "2.13.1",
-    "tsup": "8.5.0",
+    "tsup": "8.5.1",
     "typescript": "5.9.3",
     "vitest": "3.2.4"
   },
