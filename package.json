@@ -26,14 +26,17 @@
     "CHANGELOG.md"
   ],
   "exports": {
-    "default": "./dist/index.js"
+    "default": "./dist/index.mjs"
   },
   "scripts": {
-    "build": "tsup",
+    "build": "tsdown",
     "lint": "eslint src",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
     "prepare": "simple-git-hooks"
+  },
+  "dependencies": {
+    "binary-util": "1.1.1"
   },
   "devDependencies": {
     "@antfu/eslint-config": "6.4.2",
@@ -42,31 +45,13 @@
     "@tsconfig/node22": "22.0.5",
     "@tsconfig/strictest": "2.0.8",
     "@types/node": "22.19.1",
-    "binary-util": "1.1.1",
-    "dotenv": "16.6.1",
     "eslint": "9.39.1",
     "lint-staged": "16.2.7",
     "prettier": "3.7.3",
     "publint": "0.3.15",
     "simple-git-hooks": "2.13.1",
-    "tsup": "8.5.1",
+    "tsdown": "0.17.2",
     "typescript": "5.9.3",
-    "vitest": "3.2.4"
-  },
-  "pnpm": {
-    "overrides": {
-      "@eslint/markdown": "-",
-      "@stylistic/eslint-plugin": "-",
-      "eslint-plugin-jsonc": "-",
-      "eslint-plugin-toml": "-",
-      "eslint-plugin-vue": "-",
-      "eslint-processor-vue-blocks": "-",
-      "eslint-plugin-yml": "-",
-      "jsonc-eslint-parser": "-",
-      "toml-eslint-parser": "-",
-      "yaml-eslint-parser": "-",
-      "is-core-module": "npm:@nolyfill/is-core-module@^1",
-      "safer-buffer": "npm:@nolyfill/safer-buffer@^1"
-    }
+    "vitest": "4.0.15"
   }
 }
