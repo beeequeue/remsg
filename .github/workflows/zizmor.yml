@@ -1,0 +1,37 @@
+name: zizmor
+
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/*]
+  pull_request:
+    paths: [.github/workflows/*]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint-workflows:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read # only required in private repos
+      actions: read # only required in private repos
+      security-events: write # allow writing security events
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6
+        with:
+          persist-credentials: false
+
+      - name: Run zizmor 🌈
+        uses: zizmorcore/zizmor-action@e673c3917a1aef3c65c972347ed84ccd013ecda4 # v0.2.0
+        with:
+          persona: pedantic
+          annotations: true
+          advanced-security: false
