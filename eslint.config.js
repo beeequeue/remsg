@@ -7,6 +7,7 @@ export default antfu({
   jsonc: false,
   jsx: false,
   toml: false,
+  pnpm: false,
   typescript: {
     tsconfigPath: "tsconfig.json",
 
