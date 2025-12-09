@@ -1,5 +1,15 @@
 # remsg
 
+## 1.1.1
+
+### Patch Changes
+
+- [#41](https://github.com/beeequeue/remsg/pull/41) [`3396d37`](https://github.com/beeequeue/remsg/commit/3396d378f49bce1dd9f2e306bc8db1309e2a9acf) - Basic maintenance work. Replaced build tool.
+
+- [#41](https://github.com/beeequeue/remsg/pull/41) [`3396d37`](https://github.com/beeequeue/remsg/commit/3396d378f49bce1dd9f2e306bc8db1309e2a9acf) - Enabled trusted publishing.
+
+- [#41](https://github.com/beeequeue/remsg/pull/41) [`3396d37`](https://github.com/beeequeue/remsg/commit/3396d378f49bce1dd9f2e306bc8db1309e2a9acf) - Unbundled `binary-util`
+
 ## 1.1.0
 
 ### Minor Changes
