@@ -9,15 +9,15 @@
     "url": "https://github.com/beeequeue/remsg.git"
   },
   "license": "MIT",
-  "packageManager": "pnpm@10.24.0",
+  "packageManager": "pnpm@10.25.0",
   "engines": {
-    "node": ">=20"
+    "node": ">=20.19"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,json,json5,yaml,yml,css,scss,md}": [
+    "*.{js,jsx,mjs,cjs,ts,tsx,mts,cts,json,json5,yaml,yml,css,scss,md}": [
       "prettier --write"
     ]
   },
@@ -26,8 +26,7 @@
     "CHANGELOG.md"
   ],
   "exports": {
-    "types": "./dist/index.d.ts",
-    "import": "./dist/index.js"
+    "default": "./dist/index.js"
   },
   "scripts": {
     "build": "tsup",
@@ -37,7 +36,7 @@
     "prepare": "simple-git-hooks"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "5.4.1",
+    "@antfu/eslint-config": "6.4.2",
     "@changesets/changelog-github": "0.5.2",
     "@changesets/cli": "2.29.8",
     "@tsconfig/node22": "22.0.5",
@@ -46,7 +45,6 @@
     "binary-util": "1.1.1",
     "dotenv": "16.6.1",
     "eslint": "9.39.1",
-    "eslint-define-config": "2.1.0",
     "lint-staged": "16.2.7",
     "prettier": "3.7.3",
     "publint": "0.3.15",
