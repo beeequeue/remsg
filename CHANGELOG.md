@@ -1,5 +1,11 @@
 # remsg
 
+## 1.2.0
+
+### Minor Changes
+
+- [`5ce4aaa`](https://github.com/beeequeue/remsg/commit/5ce4aaaeeac19ba72544b1a4ade72233fbfc05b0) - Added hash handling (checking if hashes are correct and updating them in encoded files)
+
 ## 1.1.2
 
 ### Patch Changes
