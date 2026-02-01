@@ -15,10 +15,9 @@ const realFilePath = path.resolve(
 )
 
 describe.skipIf(!existsSync(realFilePath))("DialogMsg.msg.539100710", async () => {
-  const file = await fs.readFile(realFilePath)
-  const msg = decodeMsg(file)
-
-  it("should parse the file correctly", () => {
+  it("should parse the file correctly", async () => {
+    const file = await fs.readFile(realFilePath)
+    const msg = decodeMsg(file)
     expect(msg.entries[1]).toMatchObject({
       name: "DialogMsg_Fa_TrainingArea_001",
       strings: {
@@ -27,7 +26,9 @@ describe.skipIf(!existsSync(realFilePath))("DialogMsg.msg.539100710", async () =
     })
   })
 
-  it.skip("should produce an identical file to a parsed one", () => {
+  it.skip("should produce an identical file to a parsed one", async () => {
+    const file = await fs.readFile(realFilePath)
+    const msg = decodeMsg(file)
     const result = encodeMsg(msg)
 
     expect(result.byteLength).toStrictEqual(file.byteLength)
