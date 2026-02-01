@@ -69,7 +69,7 @@ export const decodeMsg = (data: Buffer): REMsg => {
     throw new Error(`Invalid magic: ${header.magic as string}`)
   }
   if (header.version !== 539100710 && header.version !== 23) {
-    throw new Error(`Uknkown version: ${header.version}`)
+    throw new Error(`Unknown version: ${header.version}`)
   }
 
   const entryHeaderOffsets = [] as bigint[]
