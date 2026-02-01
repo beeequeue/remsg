@@ -154,8 +154,7 @@ export const decodeMsg = (data: Buffer): REMsg => {
             break
           // int
           case 0:
-            entry.attributes[j] = parser.readUint32()
-            parser.seek(4) // maybe wrong
+            entry.attributes[j] = Number(parser.readUint64())
             break
           // float/double
           case 1:
