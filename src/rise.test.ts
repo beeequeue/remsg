@@ -11,15 +11,18 @@ const realFilePath = path.resolve(
   "../fixtures/DialogMsg.msg.539100710",
 )
 
-it.skipIf(!existsSync(realFilePath))("should parse a real file", async () => {
-  const file = await fs.readFile(realFilePath)
+it.skipIf(!existsSync(realFilePath))(
+  "should parse a real file (DialogMsg.msg.539100710)",
+  async () => {
+    const file = await fs.readFile(realFilePath)
 
-  const msg = decodeMsg(file)
+    const msg = decodeMsg(file)
 
-  expect(msg.entries[1]).toMatchObject({
-    name: "DialogMsg_Fa_TrainingArea_001",
-    strings: {
-      en: "Go to your room?",
-    },
-  })
-})
+    expect(msg.entries[1]).toMatchObject({
+      name: "DialogMsg_Fa_TrainingArea_001",
+      strings: {
+        en: "Go to your room?",
+      },
+    })
+  },
+)

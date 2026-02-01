@@ -1,4 +1,3 @@
-/* eslint-disable unicorn/number-literal-case */
 import { Buffer } from "node:buffer"
 
 const encryptionKey = [

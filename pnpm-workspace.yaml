@@ -9,7 +9,10 @@ overrides:
   "@antfu/eslint-config>toml-eslint-parser": "-"
   "@antfu/eslint-config>vitest": "-"
   eslint-plugin-pnpm>jsonc-eslint-parser: "-"
-  vite: npm:rolldown-vite@latest
+  rolldown: 1.0.0-rc.2
+  vite: beta
+
+enableGlobalVirtualStore: false
 
 savePrefix: ""
 shellEmulator: true
@@ -17,6 +20,7 @@ minimumReleaseAge: 1440
 minimumReleaseAgeExclude:
   - "@oxc-project/*"
   - "@rolldown/*"
+  - binary-util
   - rolldown
   - tsdown
   - unrun
