@@ -23,8 +23,8 @@ importers:
   .:
     dependencies:
       binary-util:
-        specifier: 1.1.1
-        version: 1.1.1
+        specifier: 2.0.3
+        version: 2.0.3
     devDependencies:
       '@antfu/eslint-config':
         specifier: 7.2.0
@@ -695,9 +695,9 @@ packages:
     resolution: {integrity: sha512-ZCQ9GEWl73BVm8bu5Fts8nt7MHdbt5vY9bP6WGnUh+r3l8M7CgfyTlwsgCbMC66BNxPr6Xoce3j66Ms5YUQTNA==}
     hasBin: true
 
-  binary-util@1.1.1:
-    resolution: {integrity: sha512-e5z0g5NXz+wAQwL20CVAyk2Pg75+1ho0p3wcyf3MqLyZFmDxFvUsTX0QBbp1WgHFl+UaOr/x1Pspt/G4hFUxVQ==}
-    engines: {node: '>=20'}
+  binary-util@2.0.3:
+    resolution: {integrity: sha512-hEY5abwWUndfO59Iq6sqluwT+FRaO4WuF7FOauOWL8c91+2oT1ux1w30To7Z5aSVNzVDBVSvQJ+D3QC2A+oLCg==}
+    engines: {node: '>=20.19'}
 
   birpc@4.0.0:
     resolution: {integrity: sha512-LShSxJP0KTmd101b6DRyGBj57LZxSDYWKitQNW/mi8GRMvZb078Uf9+pveax1DrVL89vm7mWe+TovdI/UDOuPw==}
@@ -2636,7 +2636,7 @@ snapshots:
 
   baseline-browser-mapping@2.9.4: {}
 
-  binary-util@1.1.1: {}
+  binary-util@2.0.3: {}
 
   birpc@4.0.0: {}
 
