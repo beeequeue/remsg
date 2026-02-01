@@ -5,7 +5,7 @@ import { Decoder } from "binary-util"
 import { LanguageCodes } from "./constants"
 import { decrypt } from "./crypto"
 import type { REMsg } from "./types"
-import { bufferToUUID, extractStringMap } from "./utils"
+import { bufferToUUID, extractStringMap, hashString } from "./utils"
 
 // Internal types
 
@@ -217,6 +217,25 @@ export const decodeMsg = (data: Buffer): REMsg => {
     }
   }
 
+  const parsedEntries: REMsg["entries"] = []
+  for (const { header, name, attributes, strings } of entries) {
+    const hash = hashString(name)
+    if (hash !== header.hash) {
+      throw new Error(`Hash mismatch for entry ${name}: ${hash} != ${header.hash}`)
+    }
+
+    parsedEntries.push({
+      meta: {
+        id: header.id,
+        crc: header.crc,
+        hash: header.hash,
+      },
+      name,
+      attributes,
+      strings,
+    })
+  }
+
   return {
     meta: {
       version: header.version,
@@ -225,15 +244,6 @@ export const decodeMsg = (data: Buffer): REMsg => {
         name: attr.name,
       })),
     },
-    entries: entries.map((entry) => ({
-      meta: {
-        id: entry.header.id,
-        crc: entry.header.crc,
-        hash: entry.header.hash,
-      },
-      name: entry.name,
-      attributes: entry.attributes,
-      strings: entry.strings,
-    })),
+    entries: parsedEntries,
   }
 }

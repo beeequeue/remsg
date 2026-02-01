@@ -1,5 +1,7 @@
 import { Buffer } from "node:buffer"
 
+import { hash32 } from "murmur-hash"
+
 import type { REMsg } from "./types"
 
 export const bufferToUUID = (buffer: Buffer): string => {
@@ -26,6 +28,10 @@ export const uUIDToBuffer = (uuid: string): Buffer => {
     "hex",
   )
 }
+
+const SEED = 0xffffffff
+export const hashString = (input: string): number =>
+  hash32(Buffer.from(input, "utf16le"), SEED)
 
 export const extractStringMap = (
   data: Buffer,

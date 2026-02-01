@@ -4,6 +4,7 @@ export default defineConfig({
   entry: ["src/index.ts"],
   outDir: "dist",
   unbundle: true,
+  inlineOnly: ["murmur-hash"],
 
   env: { TEST: false },
 
