@@ -2,7 +2,7 @@
   "name": "remsg",
   "description": "A library for parsing and serializing MSG files for the RE Engine.",
   "type": "module",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "author": "BeeeQueue <adam@haglund.dev>",
   "repository": {
     "type": "git",

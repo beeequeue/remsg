@@ -1,5 +1,11 @@
 # remsg
 
+## 1.1.2
+
+### Patch Changes
+
+- [`d396a06`](https://github.com/beeequeue/remsg/commit/d396a06e62a4e00877f77a33f89e81ac31dbf7e2) - Updated `binary-util` to v2
+
 ## 1.1.1
 
 ### Patch Changes
