@@ -39,19 +39,19 @@
     "binary-util": "2.0.3"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "7.2.0",
+    "@antfu/eslint-config": "7.6.1",
     "@changesets/changelog-github": "1.0.0-next.1",
     "@changesets/cli": "3.0.0-next.1",
     "@tsconfig/node22": "22.0.5",
     "@tsconfig/strictest": "2.0.8",
-    "@types/node": "22.19.7",
-    "eslint": "9.39.2",
-    "lint-staged": "16.2.7",
-    "murmur-hash": "2.0.0",
+    "@types/node": "25.3.2",
+    "eslint": "10.0.2",
+    "lint-staged": "16.3.0",
+    "murmur-hash": "2.0.1",
     "prettier": "3.8.1",
     "publint": "0.3.17",
     "simple-git-hooks": "2.13.1",
-    "tsdown": "0.20.1",
+    "tsdown": "0.21.0-beta.2",
     "typescript": "5.9.3",
     "vitest": "4.0.18"
   }
