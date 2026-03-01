@@ -1,5 +1,11 @@
 # remsg
 
+## 1.2.1
+
+### Patch Changes
+
+- [`6995c29`](https://github.com/beeequeue/remsg/commit/6995c2962a5863bf2832888e8229a90051e98dab) - Changed the magic header encoding to ASCII.
+
 ## 1.2.0
 
 ### Minor Changes
