@@ -115,12 +115,14 @@ export const encodeMsg = (input: REMsg) => {
     for (let j = 0; j < input.meta.attributes.length; j++) {
       const attribute = input.meta.attributes[j]
 
+      entryHeaderOffsets[i].attributeValues[j] = encoder.currentOffset
+
       switch (attribute.type) {
         case -1: // null string
           encoder.setInt64(-1n)
           break
         case 0: // int
-          encoder.setInt32(entry.attributes[j] as number)
+          encoder.setUint64(BigInt(entry.attributes[j] as number))
           break
         case 1: // double
           encoder.setDouble(entry.attributes[j] as number)
@@ -129,8 +131,6 @@ export const encodeMsg = (input: REMsg) => {
           encoder.setInt64(-1n)
           break
       }
-
-      entryHeaderOffsets[i].attributeValues[j] = encoder.currentOffset
     }
   }
 
