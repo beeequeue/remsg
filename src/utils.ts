@@ -2,7 +2,7 @@ import { Buffer } from "node:buffer"
 
 import { hash32 } from "murmur-hash"
 
-import type { REMsg } from "./types"
+import type { REMsg } from "./types.ts"
 
 export const bufferToUUID = (buffer: Buffer): string => {
   const hex = buffer.toString("hex")
@@ -76,7 +76,7 @@ export const createStringMapAndData = (msg: REMsg, initialOffset: number) => {
   const nullAttributes = [] as number[]
   const stringAttributes = [] as number[]
   for (let i = 0; i < msg.meta.attributes.length; i++) {
-    const attribute = msg.meta.attributes[i]
+    const attribute = msg.meta.attributes[i]!
 
     if (attribute.type === -1) {
       getStringOffset("")
@@ -88,7 +88,7 @@ export const createStringMapAndData = (msg: REMsg, initialOffset: number) => {
   }
 
   for (let i = 0; i < msg.meta.attributes.length; i++) {
-    const attribute = msg.meta.attributes[i]
+    const attribute = msg.meta.attributes[i]!
     getStringOffset(attribute.name)
   }
 

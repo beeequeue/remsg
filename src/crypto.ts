@@ -11,8 +11,8 @@ export const decrypt = (data: Buffer): Buffer => {
   let prev = 0
 
   for (let i = 0; i < rawData.length; i++) {
-    const cur = rawData[i]
-    rawData[i] = cur ^ prev ^ encryptionKey[i & 0xf]
+    const cur = rawData[i]!
+    rawData[i] = cur ^ prev ^ encryptionKey[i & 0xf]!
     prev = cur
   }
 
@@ -24,9 +24,9 @@ export const encrypt = (data: Buffer): Buffer => {
   let prev = 0
 
   for (let i = 0; i < rawData.length; i++) {
-    const cur = rawData[i]
-    rawData[i] = cur ^ prev ^ encryptionKey[i & 0xf]
-    prev = rawData[i]
+    const cur = rawData[i]!
+    rawData[i] = cur ^ prev ^ encryptionKey[i & 0xf]!
+    prev = rawData[i]!
   }
 
   return rawData

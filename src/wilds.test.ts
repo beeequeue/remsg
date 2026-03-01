@@ -4,7 +4,7 @@ import path from "node:path"
 
 import { expect, it } from "vitest"
 
-import { decodeMsg } from "./decode"
+import { decodeMsg } from "./decode.ts"
 
 const realFilePath = path.resolve(import.meta.dirname, "../fixtures/OpenBetaText.msg.23")
 

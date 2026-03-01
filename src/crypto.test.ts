@@ -2,7 +2,7 @@ import { Buffer } from "node:buffer"
 
 import { expect, it } from "vitest"
 
-import { decrypt, encrypt } from "./crypto"
+import { decrypt, encrypt } from "./crypto.ts"
 
 it("should encrypt and decrypt data", () => {
   const str = "Hello, World!"

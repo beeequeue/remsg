@@ -1,4 +1,4 @@
-import type { LanguageCodes } from "./constants"
+import type { LanguageCodes } from "./constants.ts"
 
 type REMsgEntry = {
   meta: {

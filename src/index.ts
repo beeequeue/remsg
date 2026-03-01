@@ -1,4 +1,4 @@
-export { LanguageCodes } from "./constants"
-export { decodeMsg } from "./decode"
-export { encodeMsg } from "./encode"
-export type { REMsg } from "./types"
+export { LanguageCodes } from "./constants.ts"
+export { decodeMsg } from "./decode.ts"
+export { encodeMsg } from "./encode.ts"
+export type { REMsg } from "./types.ts"

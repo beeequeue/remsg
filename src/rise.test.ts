@@ -6,8 +6,8 @@ import path from "node:path"
 import { hash128 } from "murmur-hash"
 import { describe, expect, it } from "vitest"
 
-import { decodeMsg } from "./decode"
-import { encodeMsg } from "./encode"
+import { decodeMsg } from "./decode.ts"
+import { encodeMsg } from "./encode.ts"
 
 const realFilePath = path.resolve(
   import.meta.dirname,

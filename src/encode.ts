@@ -1,8 +1,8 @@
 import { Encoder } from "binary-util"
 
-import { encrypt } from "./crypto"
-import type { REMsg } from "./types"
-import { createStringMapAndData, hashString, uUIDToBuffer } from "./utils"
+import { encrypt } from "./crypto.ts"
+import type { REMsg } from "./types.ts"
+import { createStringMapAndData, hashString, uUIDToBuffer } from "./utils.ts"
 
 export const encodeMsg = (input: REMsg) => {
   if (input.meta.version !== 539100710 && input.meta.version !== 23) {
@@ -82,7 +82,7 @@ export const encodeMsg = (input: REMsg) => {
   for (let i = 0; i < input.entries.length; i++) {
     encoder.setUint64(BigInt(encoder.currentOffset), { into: entryHeadersOffsets[i] })
 
-    const entry = input.entries[i]
+    const entry = input.entries[i]!
 
     encoder.setBuffer(uUIDToBuffer(entry.meta.id))
     encoder.setUint32(entry.meta.crc)
@@ -90,32 +90,32 @@ export const encodeMsg = (input: REMsg) => {
 
     entryHeaderOffsets[i] ??= {} as never
 
-    entryHeaderOffsets[i].name = encoder.currentOffset
+    entryHeaderOffsets[i]!.name = encoder.currentOffset
     encoder.setInt64(-1n)
-    entryHeaderOffsets[i].attributes = encoder.currentOffset
+    entryHeaderOffsets[i]!.attributes = encoder.currentOffset
     encoder.setInt64(-1n)
 
-    entryHeaderOffsets[i].langs = []
+    entryHeaderOffsets[i]!.langs = []
     for (let j = 0; j < languageCount; j++) {
-      entryHeaderOffsets[i].langs[j] = encoder.currentOffset
+      entryHeaderOffsets[i]!.langs[j] = encoder.currentOffset
       encoder.setInt64(-1n)
     }
 
-    entryHeaderOffsets[i].attributeValues = []
+    entryHeaderOffsets[i]!.attributeValues = []
   }
 
   // entry attributes
   for (let i = 0; i < input.entries.length; i++) {
-    const entry = input.entries[i]
+    const entry = input.entries[i]!
 
     encoder.setUint64(BigInt(encoder.currentOffset), {
-      into: entryHeaderOffsets[i].attributes,
+      into: entryHeaderOffsets[i]!.attributes,
     })
 
     for (let j = 0; j < input.meta.attributes.length; j++) {
-      const attribute = input.meta.attributes[j]
+      const attribute = input.meta.attributes[j]!
 
-      entryHeaderOffsets[i].attributeValues[j] = encoder.currentOffset
+      entryHeaderOffsets[i]!.attributeValues[j] = encoder.currentOffset
 
       switch (attribute.type) {
         case -1: // null string
@@ -149,14 +149,14 @@ export const encodeMsg = (input: REMsg) => {
   // update offsets
 
   for (let i = 0; i < input.meta.attributes.length; i++) {
-    const { name } = input.meta.attributes[i]
+    const { name } = input.meta.attributes[i]!
     const offset = attributeNameOffsetOffsets[i]
     encoder.setUint64(BigInt(stringMap.get(name)!), { into: offset })
   }
 
   for (let i = 0; i < input.entries.length; i++) {
-    const entry = input.entries[i]
-    const offsets = entryHeaderOffsets[i]
+    const entry = input.entries[i]!
+    const offsets = entryHeaderOffsets[i]!
 
     // entry name
     encoder.setUint64(BigInt(stringMap.get(entry.name)!), { into: offsets.name })
@@ -164,7 +164,7 @@ export const encodeMsg = (input: REMsg) => {
     // strings
     const strings = Object.values(entry.strings)
     for (let j = 0; j < strings.length; j++) {
-      const string = strings[j]
+      const string = strings[j]!
       encoder.setUint64(BigInt(stringMap.get(string)!), { into: offsets.langs[j] })
     }
 

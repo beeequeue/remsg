@@ -2,10 +2,10 @@ import type { Buffer } from "node:buffer"
 
 import { Decoder } from "binary-util"
 
-import { LanguageCodes } from "./constants"
-import { decrypt } from "./crypto"
-import type { REMsg } from "./types"
-import { bufferToUUID, extractStringMap, hashString } from "./utils"
+import { LanguageCodes } from "./constants.ts"
+import { decrypt } from "./crypto.ts"
+import type { REMsg } from "./types.ts"
+import { bufferToUUID, extractStringMap, hashString } from "./utils.ts"
 
 // Internal types
 
@@ -82,7 +82,9 @@ export const decodeMsg = (data: Buffer): REMsg => {
 
   const languages = [] as (typeof LanguageCodes)[number][]
   for (let i = 0; i < header.langCount; i++) {
-    languages.push(LanguageCodes[parser.readInt32()] ?? "unknown")
+    const language = LanguageCodes[parser.readInt32()]!
+    if (languages == null) throw new Error(`Unknown language: ${language}`)
+    languages.push(language)
   }
   parser.alignTo(8)
 
@@ -107,7 +109,7 @@ export const decodeMsg = (data: Buffer): REMsg => {
     )
   }
   for (let i = 0; i < header.attributeCount; i++) {
-    attributesHeaders[i].nameOffset = parser.readUint64()
+    attributesHeaders[i]!.nameOffset = parser.readUint64()
   }
 
   if (header.entryCount !== 0) {
@@ -135,7 +137,7 @@ export const decodeMsg = (data: Buffer): REMsg => {
     }
 
     for (let i = 0; i < header.entryCount; i++) {
-      const entry = entries[i]
+      const entry = entries[i]!
 
       if (Number(entry.header.attributesOffset) !== parser.currentOffset) {
         throw new Error(
@@ -146,7 +148,7 @@ export const decodeMsg = (data: Buffer): REMsg => {
       entry.attributes = []
 
       for (let j = 0; j < attributesHeaders.length; j++) {
-        const attrHeader = attributesHeaders[j]
+        const attrHeader = attributesHeaders[j]!
         switch (attrHeader.type) {
           // "null" string pointer
           case -1:
@@ -180,15 +182,15 @@ export const decodeMsg = (data: Buffer): REMsg => {
     const stringMap = extractStringMap(decryptedStringsBuffer, parser.currentOffset)
 
     for (let i = 0; i < attributesHeaders.length; i++) {
-      const attributeHeader = attributesHeaders[i]
+      const attributeHeader = attributesHeaders[i]!
       attributeHeader.name = stringMap.get(Number(attributeHeader.nameOffset))!
     }
 
     for (let i = 0; i < entries.length; i++) {
-      const entry = entries[i]
+      const entry = entries[i]!
 
       for (let j = 0; j < header.attributeCount; j++) {
-        switch (attributesHeaders[j].type) {
+        switch (attributesHeaders[j]!.type) {
           case 2:
             entry.attributes[j] = stringMap.get(entry.attributes[j] as number)!
             break
@@ -206,13 +208,13 @@ export const decodeMsg = (data: Buffer): REMsg => {
     }
 
     for (let i = 0; i < entries.length; i++) {
-      const entry = entries[i]
+      const entry = entries[i]!
       entry.name = stringMap.get(Number(entry.header.nameOffset))!
 
       entry.strings = {}
       for (let j = 0; j < entry.header.contentOffsetsByLang.length; j++) {
         const offset = Number(entry.header.contentOffsetsByLang[j])
-        entry.strings[languages[j]] = stringMap.get(offset)!
+        entry.strings[languages[j]!] = stringMap.get(offset)!
       }
     }
   }
