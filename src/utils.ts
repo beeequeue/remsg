@@ -64,7 +64,7 @@ export const createStringMapAndData = (msg: REMsg, initialOffset: number) => {
   const map = new Map<string, number>()
 
   const getStringOffset = (str: string) => {
-    if (map.has(str)) return map.get("str")
+    if (map.has(str)) return map.get(str)
 
     const offset = initialOffset + currentOffset
     map.set(str, offset)
