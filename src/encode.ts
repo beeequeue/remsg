@@ -12,7 +12,7 @@ export const encodeMsg = (input: REMsg) => {
   const encoder = new Encoder()
 
   encoder.setUint32(input.meta.version) // version
-  encoder.setString("GMSG") // magic
+  encoder.setString("GMSG", { encoding: "ascii" }) // magic
   encoder.setUint64(16n) // header offset
   encoder.setUint32(input.entries.length) // entry count
   encoder.setUint32(input.meta.attributes.length) // attribute count

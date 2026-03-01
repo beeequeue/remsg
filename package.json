@@ -36,7 +36,7 @@
     "prepare": "simple-git-hooks"
   },
   "dependencies": {
-    "binary-util": "2.0.3"
+    "binary-util": "2.0.4"
   },
   "devDependencies": {
     "@antfu/eslint-config": "7.6.1",
