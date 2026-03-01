@@ -1,8 +1,9 @@
 # remsg
 
-[![npm](https://img.shields.io/npm/v/remsg)](https://www.npmjs.com/package/remsg)
-![npm bundle size](https://deno.bundlejs.com/?q=remsg&badge)
-![node-current](https://img.shields.io/node/v/remsg)
+[![Open on npmx.dev](https://npmx.dev/api/registry/badge/version/remsg)](https://npmx.dev/package/remsg)
+[![Open on npmx.dev](https://npmx.dev/api/registry/badge/dependencies/remsg)](https://npmx.dev/package/remsg)
+[![Open on npmx.dev](https://npmx.dev/api/registry/badge/size/remsg)](https://npmx.dev/package/remsg)
+[![npm bundle size](https://img.shields.io/badge/bundled%20size-11.9%20kB-blue?labelColor=000)](https://teardown.kelinci.dev/?q=npm%3Aremsg)
 
 A library for parsing and serializing MSG files for the RE Engine, more specifically for Monster Hunter: Rise.
 
