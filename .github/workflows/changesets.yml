@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - .changeset/**/*
   workflow_dispatch:
 
 permissions:
@@ -64,5 +62,4 @@ jobs:
           publish: pnpm changeset publish
         env:
           NPM_CONFIG_PROVENANCE: true
-          GITHUB_TOKEN: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
           NPM_TOKEN: "" # Workaround. See https://github.com/changesets/changesets/issues/1152#issuecomment-3190884868
