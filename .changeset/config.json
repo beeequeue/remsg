@@ -1,9 +1,9 @@
 {
-  "$schema": "https://unpkg.com/@changesets/config@1.8.0/schema.json",
+  "$schema": "https://unpkg.com/@changesets/config@4.0.0-next.4/schema.json",
   "access": "public",
   "baseBranch": "main",
   "changelog": [
-    "./.changeset/changelog-formatter.js",
+    "./changelog-formatter.js",
     {
       "repo": "BeeeQueue/remsg"
     }
