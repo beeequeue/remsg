@@ -22,8 +22,7 @@
     ]
   },
   "files": [
-    "dist",
-    "CHANGELOG.md"
+    "dist"
   ],
   "exports": {
     "default": "./dist/index.mjs"
@@ -45,6 +44,7 @@
     "@tsconfig/node24": "24.0.4",
     "@tsconfig/strictest": "2.0.8",
     "@types/node": "22.19.19",
+    "@typescript/native-preview": "7.0.0-dev.20260524.1",
     "eslint": "10.4.0",
     "lint-staged": "17.0.5",
     "murmur-hash": "2.0.1",
@@ -52,7 +52,6 @@
     "publint": "0.3.21",
     "simple-git-hooks": "2.13.1",
     "tsdown": "0.22.0",
-    "typescript": "6.0.3",
     "vitest": "4.1.7"
   }
 }
