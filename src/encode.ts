@@ -1,10 +1,12 @@
+import type { Buffer } from "node:buffer"
+
 import { Encoder } from "binary-util"
 
 import { encrypt } from "./crypto.ts"
 import type { REMsg } from "./types.ts"
 import { createStringMapAndData, hashString, uUIDToBuffer } from "./utils.ts"
 
-export const encodeMsg = (input: REMsg) => {
+export const encodeMsg = (input: REMsg): Buffer => {
   if (input.meta.version !== 539100710 && input.meta.version !== 23) {
     throw new Error(`Unsupported version ${input.meta.version}`)
   }
@@ -67,6 +69,7 @@ export const encodeMsg = (input: REMsg) => {
   // attribute names offset
   encoder.setUint64(BigInt(encoder.currentOffset), { into: attributeNamesOffsetOffset })
   const attributeNameOffsetOffsets = [] as number[]
+  // oxlint-disable-next-line no-unused-vars
   for (const _ of input.meta.attributes) {
     attributeNameOffsetOffsets.push(encoder.currentOffset)
     encoder.setInt64(-1n)

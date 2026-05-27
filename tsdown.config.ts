@@ -13,7 +13,7 @@ export default defineConfig({
 
   platform: "node",
   format: "esm",
-  dts: { tsgo: true },
+  dts: { oxc: true },
   fixedExtension: true,
   minify: "dce-only",
 })
