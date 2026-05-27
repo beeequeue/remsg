@@ -19,8 +19,7 @@ export const encodeMsg = (input: REMsg): Buffer => {
   encoder.setUint32(input.entries.length) // entry count
   encoder.setUint32(input.meta.attributes.length) // attribute count
   // language count
-  const languageCount =
-    input.entries[0] != null ? Object.keys(input.entries[0].strings).length : 0
+  const languageCount = input.entries[0] != null ? Object.keys(input.entries[0].strings).length : 0
   encoder.setUint32(languageCount)
   encoder.alignTo(8)
 

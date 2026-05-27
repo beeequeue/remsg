@@ -30,13 +30,9 @@ export const uUIDToBuffer = (uuid: string): Buffer => {
 }
 
 const SEED = 0xffffffff
-export const hashString = (input: string): number =>
-  hash32(Buffer.from(input, "utf16le"), SEED)
+export const hashString = (input: string): number => hash32(Buffer.from(input, "utf16le"), SEED)
 
-export const extractStringMap = (
-  data: Buffer,
-  baseOffset: number,
-): Map<number, string> => {
+export const extractStringMap = (data: Buffer, baseOffset: number): Map<number, string> => {
   if (data.length === 0) {
     return new Map()
   }

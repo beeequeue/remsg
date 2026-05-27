@@ -18,7 +18,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,mjs,cjs,ts,tsx,mts,cts,json,json5,yaml,yml,css,scss,md}": [
-      "prettier --write"
+      "oxfmt --no-error-on-unmatched-pattern --write"
     ]
   },
   "files": [
@@ -45,9 +45,9 @@
     "@types/node": "22.19.19",
     "lint-staged": "17.0.5",
     "murmur-hash": "2.0.1",
+    "oxfmt": "0.51.0",
     "oxlint": "1.66.0",
     "oxlint-tsgolint": "0.23.0",
-    "prettier": "3.8.3",
     "publint": "0.3.21",
     "simple-git-hooks": "2.13.1",
     "tsdown": "0.22.0",

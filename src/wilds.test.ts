@@ -8,20 +8,15 @@ import { decodeMsg } from "./decode.ts"
 
 const realFilePath = path.resolve(import.meta.dirname, "../fixtures/OpenBetaText.msg.23")
 
-it.skipIf(!existsSync(realFilePath))(
-  "should parse a real file (OpenBetaText.msg.23)",
-  async () => {
-    const file = await fs.readFile(realFilePath)
+it.skipIf(!existsSync(realFilePath))("should parse a real file (OpenBetaText.msg.23)", async () => {
+  const file = await fs.readFile(realFilePath)
 
-    const msg = decodeMsg(file)
+  const msg = decodeMsg(file)
 
-    expect(msg.entries[1]).toMatchObject({
-      name: "OpenBetaText_000",
-      strings: {
-        en: expect.stringContaining(
-          "From now on, ask your parents to help you.",
-        ) as never,
-      },
-    })
-  },
-)
+  expect(msg.entries[1]).toMatchObject({
+    name: "OpenBetaText_000",
+    strings: {
+      en: expect.stringContaining("From now on, ask your parents to help you.") as never,
+    },
+  })
+})

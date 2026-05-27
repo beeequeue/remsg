@@ -9,10 +9,7 @@ import { describe, expect, it } from "vitest"
 import { decodeMsg } from "./decode.ts"
 import { encodeMsg } from "./encode.ts"
 
-const realFilePath = path.resolve(
-  import.meta.dirname,
-  "../fixtures/DialogMsg.msg.539100710",
-)
+const realFilePath = path.resolve(import.meta.dirname, "../fixtures/DialogMsg.msg.539100710")
 
 describe.skipIf(!existsSync(realFilePath))("DialogMsg.msg.539100710", async () => {
   it("should parse the file correctly", async () => {

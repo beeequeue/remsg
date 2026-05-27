@@ -173,9 +173,7 @@ export const decodeMsg = (data: Buffer): REMsg => {
     }
 
     if (Number(header.dataOffset) !== parser.currentOffset) {
-      throw new Error(
-        `Data offset mismatch: $${header.dataOffset} != ${parser.currentOffset}`,
-      )
+      throw new Error(`Data offset mismatch: $${header.dataOffset} != ${parser.currentOffset}`)
     }
 
     const decryptedStringsBuffer = decrypt(data.subarray(parser.currentOffset))
