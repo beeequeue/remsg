@@ -1,5 +1,11 @@
 # remsg
 
+## 2.0.1
+
+### Patch Changes
+
+- [`aac521f`](https://github.com/beeequeue/remsg/commit/aac521fb0ffecd8092f15b53cb6bfed821e54331) - Removed changelog from published tarball
+
 ## 2.0.0
 
 ### Major Changes
