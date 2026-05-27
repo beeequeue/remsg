@@ -1,3 +1,12 @@
+allowBuilds:
+  simple-git-hooks: false
+
+blockExoticSubdeps: false
+dedupePeers: true
+dedupePeerDependents: true
+
+minimumReleaseAge: 4320
+
 overrides:
   "@antfu/eslint-config>@eslint/markdown": "-"
   "@antfu/eslint-config>@stylistic/eslint-plugin": "-"
@@ -9,18 +18,6 @@ overrides:
   "@antfu/eslint-config>toml-eslint-parser": "-"
   "@antfu/eslint-config>vitest": "-"
   eslint-plugin-pnpm>jsonc-eslint-parser: "-"
-  rolldown: 1.0.0-rc.6
-  vite: beta
-
-enableGlobalVirtualStore: false
 
 savePrefix: ""
 shellEmulator: true
-minimumReleaseAge: 1440
-minimumReleaseAgeExclude:
-  - "@oxc-project/*"
-  - "@rolldown/*"
-  - binary-util
-  - rolldown
-  - tsdown
-  - unrun

@@ -9,9 +9,9 @@
     "url": "https://github.com/beeequeue/remsg.git"
   },
   "license": "MIT",
-  "packageManager": "pnpm@10.30.3",
+  "packageManager": "pnpm@11.3.0",
   "engines": {
-    "node": ">=20.19"
+    "node": ">=22"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
@@ -36,23 +36,23 @@
     "prepare": "simple-git-hooks"
   },
   "dependencies": {
-    "binary-util": "2.0.4"
+    "binary-util": "~2.0.5"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "7.6.1",
-    "@changesets/changelog-github": "1.0.0-next.1",
-    "@changesets/cli": "3.0.0-next.1",
-    "@tsconfig/node24": "24.0.0",
+    "@antfu/eslint-config": "9.0.0",
+    "@changesets/changelog-github": "https://pkg.pr.new/changesets/changesets/@changesets/changelog-github@bd27256",
+    "@changesets/cli": "https://pkg.pr.new/changesets/changesets/@changesets/cli@bd27256",
+    "@tsconfig/node24": "24.0.4",
     "@tsconfig/strictest": "2.0.8",
-    "@types/node": "25.3.2",
-    "eslint": "10.0.2",
-    "lint-staged": "16.3.0",
+    "@types/node": "22.19.19",
+    "eslint": "10.4.0",
+    "lint-staged": "17.0.5",
     "murmur-hash": "2.0.1",
-    "prettier": "3.8.1",
-    "publint": "0.3.17",
+    "prettier": "3.8.3",
+    "publint": "0.3.21",
     "simple-git-hooks": "2.13.1",
-    "tsdown": "0.21.0-beta.2",
-    "typescript": "5.9.3",
-    "vitest": "4.0.18"
+    "tsdown": "0.22.0",
+    "typescript": "6.0.3",
+    "vitest": "4.1.7"
   }
 }

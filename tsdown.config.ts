@@ -5,7 +5,7 @@ export default defineConfig({
   outDir: "dist",
   unbundle: true,
   deps: {
-    onlyAllowBundle: ["murmur-hash"],
+    onlyBundle: ["murmur-hash"],
   },
 
   env: { TEST: false },
