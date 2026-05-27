@@ -1,5 +1,15 @@
 # remsg
 
+## 2.0.0
+
+### Major Changes
+
+- [`be1dfa0`](https://github.com/beeequeue/remsg/commit/be1dfa0e104ac2350aca113c959dc7a686a15d6e) - Bumped minimum supported Node version to ^22.
+
+### Patch Changes
+
+- [`c81e83d`](https://github.com/beeequeue/remsg/commit/c81e83d1f144093c0197add8e53af9672d65cd14) - Updated dependencies.
+
 ## 1.2.1
 
 ### Patch Changes
