@@ -9,7 +9,7 @@
     "url": "https://github.com/beeequeue/remsg.git"
   },
   "license": "MIT",
-  "packageManager": "pnpm@11.3.0",
+  "packageManager": "pnpm@11.11.0",
   "engines": {
     "node": ">=22"
   },
@@ -37,20 +37,20 @@
     "binary-util": "~2.0.5"
   },
   "devDependencies": {
-    "@changesets/changelog-github": "https://pkg.pr.new/changesets/changesets/@changesets/changelog-github@bd27256",
-    "@changesets/cli": "https://pkg.pr.new/changesets/changesets/@changesets/cli@bd27256",
-    "@e18e/eslint-plugin": "0.5.0",
+    "@changesets/changelog-github": "1.0.0-next.6",
+    "@changesets/cli": "3.0.0-next.8",
+    "@e18e/eslint-plugin": "0.5.1",
     "@tsconfig/node24": "24.0.4",
     "@tsconfig/strictest": "2.0.8",
-    "@types/node": "22.19.19",
-    "lint-staged": "17.0.5",
+    "@types/node": "22.20.1",
+    "lint-staged": "17.0.8",
     "murmur-hash": "2.0.1",
-    "oxfmt": "0.51.0",
-    "oxlint": "1.66.0",
-    "oxlint-tsgolint": "0.23.0",
+    "oxfmt": "0.58.0",
+    "oxlint": "1.73.0",
+    "oxlint-tsgolint": "0.24.0",
     "publint": "0.3.21",
     "simple-git-hooks": "2.13.1",
-    "tsdown": "0.22.0",
-    "vitest": "4.1.7"
+    "tsdown": "0.22.4",
+    "vitest": "4.1.10"
   }
 }
