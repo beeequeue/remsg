@@ -52,7 +52,7 @@
     "publint": "0.3.21",
     "simple-git-hooks": "2.13.1",
     "tsdown": "0.22.4",
-    "vitest": "4.1.10"
+    "vitest": "4.1.11"
   },
   "inlinedDependencies": {
     "murmur-hash": "2.0.1"
